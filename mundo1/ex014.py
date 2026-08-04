@@ -1,0 +1,5 @@
+preco=float(input("Digite o preco do produto: "))
+aumento=preco+(preco*5/100)
+desconto=preco-(preco*5/100)
+print("Com o aumento de 5% o preco do produto subira de {:.2f}R$ pra {:.2f}R$".format(preco,aumento))
+print("Com o desconto de 5%, o preco do produto descera de {:.2f}R$ para {:.2f}R$".format(preco,desconto))

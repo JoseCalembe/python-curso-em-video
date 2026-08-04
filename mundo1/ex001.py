@@ -1,0 +1,8 @@
+algo=input("digite algo:")
+print(type(algo))
+print(algo.isnumeric())
+print(algo.isalpha())
+print(algo.isspace())
+print(algo.isupper())
+print(algo.islower())
+print(algo.isalnum())
