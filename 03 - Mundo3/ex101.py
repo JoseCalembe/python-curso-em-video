@@ -2,8 +2,8 @@ lista=list()
 dados=list()
 while True:
     dados.append(str(input("Nome:")))
-    dados.append(int(input("Nota 1 :")))
-    dados.append(int(input("Nota 2 :")))
+    dados.append(float(input("Nota 1 :")))
+    dados.append(float(input("Nota 2 :")))
     media=(dados[1]+dados[2])/2
     dados.append(media)
     lista.append(dados[:])
