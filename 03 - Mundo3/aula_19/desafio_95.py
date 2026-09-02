@@ -18,24 +18,25 @@ while True:
         resp=str(input("Quer continuar? [S/N]")).upper().strip()
     if resp=='N':
        break
-print('COD NOME GOLS TOTAL')
+print(f'{"COD":<4}{"NOME":<15}{"GOLS":<14}{"TOTAL"}')
+print('-'*40)
 for pos,atleta in enumerate(jogadores):
-    print(f'{pos}{atleta["Nome"]} {atleta["Gols"]} {atleta["Total"]}')
+    print(f'{pos:<4}{atleta["Nome"]:<15}{str(atleta["Gols"]):<14}{atleta["Total"]}')
 print()
-print('-='*30)
 while True:
+    print('-'*40)
     n=int(input("Mostrar dados de qual jogador?"))
+    if n == 99:
+       print("<<<ENCERRADO>>>")
 
-    if n<0 or n>len(jogadores):
-        if n!=99:
+       break
+
+    if n<0 or n>len(jogadores)-1:
            print("Erro! nao existe jogador com o codigo {}! Tente novamente".format(n))
-    elif n>=0 and n<=len(jogadores):
-         print(f'LEVANTAMENTO DO JOGADOR {jogadores[n]["Nome"]}')
+    elif n>=0 and n<=len(jogadores)-1:
+         print(f'-- LEVANTAMENTO DO JOGADOR {jogadores[n]["Nome"]}:')
          for partidas, golos in enumerate(jogadores[n]['Gols']):
              print(f'No jogo {partidas+1} fez {golos} gols')
-    if n==99:
-            break
-print("<<<ENCERRADO>>>")
 
 
 
